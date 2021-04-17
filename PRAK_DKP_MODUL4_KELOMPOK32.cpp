@@ -9,10 +9,14 @@
 #include <iomanip>
 using namespace std;
 
-int main()
-{
-    
-}
+char letakkursi[25][25];
+string jstudio, jfilm, jam, hari2;//untuk dipakai di pencetakan tiket
+int pilihfilm() {
+	int film;
+	cout << endl;
+	cout << endl;
+	cout << "\t\t\tPilih judul film berikut ini : " << "\n\t\t\t1.The Eight Hundred	" << "\n\t\t\t2.The Accountant" << "\n\t\t\t3.Bad Boys for Life" << "\n\t\t\t4.Tenet" << "\n\t\t\t5.Collectors" << "\n\t\t\t6.Mugen Train\n";
+	cout << "\t\t\tMasukan Pilihan Angka : "; cin >> film;
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
