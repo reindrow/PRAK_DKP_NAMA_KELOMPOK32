@@ -220,6 +220,36 @@ int jadwalfilm(int film) {
 
 	return film;
 }
+int jadwalstudio(int film) {
+	int harga[3];
+	int studio;
+	string studio1 = "Reguler";//harga=Rp.35.000,00
+	string studio2 = "4DXD   ";//harga=Rp.75.000,00
+	string studio3 = "SphereX";//harga=Rp.50.000,00
+	harga[0] = 35000;
+	harga[1] = 75000;
+	harga[2] = 50000;
+
+	cout << "\n\n\t\t\tPilih studio untuk film ini";
+	cout << "\n\t\t\t1." << studio1 << "\n\t\t\t2." << studio2 << "\n\t\t\t3." << studio3;
+	cout << "\n\t\t\tMasukan angka plihan : "; cin >> studio;
+	while (studio < 0 || studio>3) { cout << "\t\t\tAngka yang anda masukkan salah silahkan masukan ulang : "; cin >> studio; }
+	switch (studio) {
+	case 1:
+		studio = harga[0];
+		jstudio = studio1;
+		break;
+	case 2:
+		studio = harga[1];
+		jstudio = studio2;
+		break;
+	case 3:
+		studio = harga[2];
+		jstudio = studio3;
+		break;
+	}
+	return studio;
+}
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
 
