@@ -311,6 +311,52 @@ int pilihkursi() {
 
 
 }
+void totalharga(int hari, int studio, int jmltiket) {
+	int harga;
+	if (hari < 5)
+	{
+		harga = studio * jmltiket;
+	}
+	else if (hari == 5)
+	{
+		harga = (studio + 5000) * jmltiket;
+	}
+	else
+	{
+		harga = (studio + 10000) * jmltiket;
+	}
+	system("cls");
+	cout << "\t\t\t+============================================================================+\n";
+	cout << "\t\t\t\t\t\t     E-Ticket Movies\t\t\t\t\n";
+	cout << "\t\t\t\t\t\tTotal harga anda: " << harga << "\t\t\t\n";
+	cout << "\t\t\t+============================================================================+";
+	cout << endl; getchar();
+}
+void cetaktiket(int film, int studio, int jmltiket, int jadwalfilm) {
+	system("cls");
+	cout << "\t\t\t+" << setfill('-') << setw(60) << "+\n";
+	cout << "\t\t\t|" << setfill(' ') << setw(34) << "E-Ticket Movies" << setw(26) << "|\n";
+	cout << "\t\t\t+" << setfill('-') << setw(60) << "+\n";
+	cout << "\t\t\t|" << setfill(' ') << setw(60) << "|\n";//enter
+	cout << "\t\t\t|" << setfill(' ') << "Judul Film\t:" << jfilm << setw(27) << "|\n";
+	for (int i = 0; i <= 3; i++)
+	{
+		for (int j = 0; j <= 3; j++)
+		{
+			if (letakkursi[i][j] == '*')
+			{
+				cout << "\t\t\t|" << setfill(' ') << "Kursi\t\t:" << "Baris(" << i << ")" << "Kolom(" << j << ")" << setw(28) << "|\n";
+			}
+		}
+	}
+	cout << "\t\t\t|" << setfill(' ') << "Studio\t\t:" << jstudio << setw(37) << "|\n";
+	cout << "\t\t\t|" << setfill(' ') << "Hari\t\t:" << hari2 << setw(38) << "|\n";
+	cout << "\t\t\t|" << setfill(' ') << "Jam\t\t:" << jam << setw(39) << "|\n";
+	cout << "\t\t\t|" << setfill('-') << setw(60) << "|\n";
+	cout << "\t\t\t|" << setfill(' ') << "CODE BOOKING\t:" << jfilm[0] << jfilm[2] << jstudio[2] << jstudio[3] << hari2[1] << jmltiket << '0' << "JG" << setw(35) << "|\n";
+	cout << "\t\t\t+" << setfill('-') << setw(60) << "+\n";
+	getchar();
+}
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
 
