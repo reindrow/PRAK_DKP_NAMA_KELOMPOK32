@@ -20,22 +20,22 @@ int pilihfilm() {
 	while (film < 0 || film>6) { cout << "\t\t\tAngka yang anda masukkan salah silahkan masukan ulang : "; cin >> film; }
 	switch (film) {
 	case 1:
-		jfilm = "The Eight Hundred";
+		jfilm = "Interstellar";
 		break;
 	case 2:
-		jfilm = "The Accountant\t  ";
+		jfilm = "How To Train Your Dragon\t  ";
 		break;
 	case 3:
-		jfilm = "Bad Boys for Life";
+		jfilm = "Johnny English Reborn";
 		break;
 	case 4:
-		jfilm = "Tenet\t\t  ";
+		jfilm = "TinTin\t\t  ";
 		break;
 	case 5:
-		jfilm = "Collectors\t  ";
+		jfilm = "Stand By Me Doraemon 2\t  ";
 		break;
 	case 6:
-		jfilm = "Mugen Train\t  ";
+		jfilm = "Terminator\t  ";
 		break;
 
 	}
