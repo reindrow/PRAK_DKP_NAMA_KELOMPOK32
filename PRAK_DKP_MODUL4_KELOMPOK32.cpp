@@ -250,6 +250,67 @@ int jadwalstudio(int film) {
 	}
 	return studio;
 }
+
+int pilihkursi() {
+	char a[25][25], d[25][25];
+	int kolom = 3, baris = 3, i, b, jmltiket;
+
+	//pembuatan array kursi
+	for (i = 1; i <= baris; i++) { //kolom
+		for (b = 1; b <= kolom; b++) { //baris
+			a[i][b] = '*';//digunakan untuk menampilkan kursi yang tersedia
+			d[i][b] = ' ';//digunakan untuk menampilkan kursi yang dipilih
+		}
+	}
+
+	cout << "\n\n\t\t\tPemesanan Tiket \n";
+	cout << "\n\t\t\tMasukan jumlah tiket yang akan dibeli (maksimal 9 tiket): "; cin >> jmltiket;
+	while (jmltiket < 1 || jmltiket>9) { cout << "\t\t\tAngka yang anda masukkan salah silahkan masukan ulang : "; cin >> jmltiket; }
+
+
+	//untuk menampilkan kursi dalam bentuk array 2 dimensi
+	cout << endl << "\t\t\tKursi Yang Tersedia Adalah: " << endl << endl;
+	for (i = 1; i <= baris; i++) { //kolom
+		for (b = 1; b <= kolom; b++) { //baris   
+			cout << "\t" << "\t\t\t|" << a[i][b] << "|";
+		}
+		cout << endl;
+	}
+	//untuk memilih kursi yang bakal dipilih
+	cout << "\t\t\tPilih letak kursi";
+	if (jmltiket >> 1) cout << "\n\t\t\tPilih letak kursi yang berbeda dari pesanan sebelumnya";
+	for (int j = 0; j < jmltiket; j++)
+	{
+		cout << "\n\t\t\tBaris berapa? "; cin >> i;
+		while (i < 1 || i>3) { cout << "\t\t\tAngka yang anda masukan salah, silahkan masukan kembali : "; cin >> i; }
+		cout << "\t\t\tKolom berapa? "; cin >> b;
+		while (b < 1 || b>3) { cout << "\t\t\tAngka yang anda masukan salah, silahkan masukan kembali : "; cin >> b; }
+		//agar pemilihan kursi tidak lebih dari batas baris dan kolom
+
+		a[i][b] = ' ';//dibuat kosong karena kursi telah dipilih
+		d[i][b] = '*';//dibuat bintang karena kursi telah dipilih
+
+	}
+	cout << endl << "\t\t\tKursi Yang Kamu Pilih: " << endl << endl;
+	for (i = 1; i <= baris; i++) { //kolom
+		for (b = 1; b <= kolom; b++) { //baris
+			cout << "\t" << "\t\t\t|" << d[i][b] << "|";
+		}
+		cout << endl;
+
+	}
+	cout << "\n\t\t\tTerimakasih telah memesan tiket";
+	getchar();
+
+	for (i = 1; i <= baris; i++) { //kolom
+		for (b = 1; b <= kolom; b++) { //baris
+			letakkursi[i][b] = d[i][b];
+		}
+	}
+	return jmltiket;
+
+
+}
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
 
