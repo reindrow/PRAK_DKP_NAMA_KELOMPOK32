@@ -15,7 +15,7 @@ int pilihfilm() {
 	int film;
 	cout << endl;
 	cout << endl;
-	cout << "\t\t\tPilih judul film berikut ini : " << "\n\t\t\t1.The Eight Hundred	" << "\n\t\t\t2.The Accountant" << "\n\t\t\t3.Bad Boys for Life" << "\n\t\t\t4.Tenet" << "\n\t\t\t5.Collectors" << "\n\t\t\t6.Mugen Train\n";
+	cout << "\t\t\tPilih judul film berikut ini : " << "\n\t\t\t1.Interstellar" << "\n\t\t\t2.How To Train Your Dragon" << "\n\t\t\t3.Johnny English Reborn" << "\n\t\t\t4.TinTin" << "\n\t\t\t5.Stand By Me Doraemon 2" << "\n\t\t\t6.Terminator\n";
 	cout << "\t\t\tMasukan Pilihan Angka : "; cin >> film;
 	while (film < 0 || film>6) { cout << "\t\t\tAngka yang anda masukkan salah silahkan masukan ulang : "; cin >> film; }
 	switch (film) {
