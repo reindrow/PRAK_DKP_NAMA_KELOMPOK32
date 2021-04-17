@@ -15,34 +15,33 @@ int pilihfilm() {
 	int film;
 	cout << endl;
 	cout << endl;
-	cout << "\t\t\tPilih judul film berikut ini : " << "\n\t\t\t1.Harley Quinn: Birds of Prey" << "\n\t\t\t2.Wonder Woman 1984" << "\n\t\t\t3.The Unholy" << "\n\t\t\t4.The Boss Baby" << "\n\t\t\t5.Underwater" << "\n\t\t\t6.Frozen 2\n";
+	cout << "\t\t\tPilih judul film berikut ini : " << "\n\t\t\t1.The Eight Hundred	" << "\n\t\t\t2.The Accountant" << "\n\t\t\t3.Bad Boys for Life" << "\n\t\t\t4.Tenet" << "\n\t\t\t5.Collectors" << "\n\t\t\t6.Mugen Train\n";
 	cout << "\t\t\tMasukan Pilihan Angka : "; cin >> film;
 	while (film < 0 || film>6) { cout << "\t\t\tAngka yang anda masukkan salah silahkan masukan ulang : "; cin >> film; }
 	switch (film) {
 	case 1:
-		jfilm = "Harley Quinn: Birds of Prey";
+		jfilm = "The Eight Hundred";
 		break;
 	case 2:
-		jfilm = "Wonder Woman 1984\t  ";
+		jfilm = "The Accountant\t  ";
 		break;
 	case 3:
-		jfilm = "The Unholy";
+		jfilm = "Bad Boys for Life";
 		break;
 	case 4:
-		jfilm = "The Boss Baby\t\t  ";
+		jfilm = "Tenet\t\t  ";
 		break;
 	case 5:
-		jfilm = "Underwater\t  ";
+		jfilm = "Collectors\t  ";
 		break;
 	case 6:
-		jfilm = "Frozen 2\t  ";
+		jfilm = "Mugen Train\t  ";
 		break;
 
 	}
 
 	return film;
 }
-
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
 
